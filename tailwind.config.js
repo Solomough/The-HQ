@@ -1,22 +1,20 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+module.exports = {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
       colors: {
-        brand: {
-          light: "#6EE7B7",
-          DEFAULT: "#34D399",
-          dark: "#059669",
-        },
+        primary: '#6B21A8', // spiritual deep purple
+        accent: '#06B6D4',
+        glass: 'rgba(255,255,255,0.06)'
       },
-    },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        display: ['Poppins', 'Inter', 'sans-serif']
+      },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #6b21a8 100%)'
+      }
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}
